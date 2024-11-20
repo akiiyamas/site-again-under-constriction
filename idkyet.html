@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products</title>
+    <title>Comments</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -24,7 +24,7 @@
                     <a href="/info.html" class="navbar__links">Info</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="/idkyet.html" class="navbar__links">Under construction</a>
+                    <a href="/idkyet.html" class="navbar__links">Comments</a>
                 </li>
                 <li class="navbar__btn">
                     <a href="https://youtu.be/C6ZVGUuwGls?si=Rj2T59rebdjIkATD" class="button" target="_blank">hey click me</a>
@@ -34,11 +34,24 @@
     </nav>
 
     
-    <div class="products">
-        <h1>Construction site ahead</h1>
-        <p>i have no idea what to put here yet so yay pls give ideas</p>
-        
+    <!-- comment section -->
+    <div class="comment-section">
+        <h3>comment if u want xD</h3>
+        <form id="comment-form" action="" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment" required></textarea>
+            <input type="submit" value="Submit">
+        </form>        
     </div>
+
+    <div id="commentsDisplay"></div>
+
+    <!-- footer -->
+    <footer class="footer__container">
+        
+    </footer>
 
     <script src="app.js"></script>
 </body>
