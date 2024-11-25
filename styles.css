@@ -313,7 +313,7 @@ html, body {
   }
   
   /* mobile responsive */
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1025px) {
     .main__container {
       display: grid;
       grid-template-columns: auto;
@@ -367,60 +367,51 @@ html, body {
   
   /* gallery section */
   .gallery {
-    background-color: #141414;
-    padding: 20px;
+    margin: 50px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #131313;
     color: #fff;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
   }
   
   .gallery h1 {
+    margin-bottom: 20px;
     font-size: 2rem;
-    margin-bottom: 10px;
-    text-align: center;
+    color: #fff;
   }
   
   .gallery__scroll {
     display: flex;
     gap: 10px;
     overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 10px 0;
-  }
-  
-  .gallery__scroll::-webkit-scrollbar {
-    display: none; 
+    scroll-snap-type: x mandatory;
+    padding: 10px;
   }
   
   .gallery__item {
-    flex: 0 0 auto; 
-    max-width: 300px; 
-    height: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
+    flex: 0 0 auto;
+    width: calc(100% - 20px); 
+    scroll-snap-align: center;
+    text-align: center;
   }
   
   .gallery__item img {
-    width: auto; 
-    height: 90%; 
-    object-fit: contain; 
-    transition: transform 0.3s ease;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
   }
   
-  .gallery__item:hover img {
-    transform: scale(1.1);
-  }
-  
-  
-  @media screen and (max-width: 768px) {
-    .gallery h1 {
-      font-size: 1.5rem;
-    }
-  
+  @media (min-width: 768px) {
     .gallery__item {
-      max-width: 120px;
+      width: calc(50% - 20px); 
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .gallery__item {
+      width: calc(33.33% - 20px); 
     }
   }
   
@@ -634,6 +625,9 @@ html, body {
 #commentsDisplay .comment p {
   margin: 30px 0;
 }
+
+
+
 
 
 
